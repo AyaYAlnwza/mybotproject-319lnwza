@@ -310,26 +310,26 @@
     </div>
 
     <script type="module">
-        import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+    import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
 
-        // 🔴 API KEY (Hardcoded as per user request)
-        const API_KEY = "AIzaSyDREkYaWh-zpqNZze-uYNdQomyyPnATpH0";
+    const API_KEY = "AIzaSyDREkYaWh-zpqNZze-uYNdQomyyPnATpH0";
 
-        const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const genAI = new GoogleGenerativeAI(API_KEY);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-        const chat = model.startChat({
-            history: [
-                {
-                    role: "user",
-                    parts: [{ text: "คุณคือเพื่อนชื่อ 'มินิมอส' หน้าที่คือรับฟัง ให้กำลังใจ ใช้ภาษาอบอุ่น เป็นกันเอง ไม่ตัดสินคน ห้ามแนะนำทางการแพทย์" }],
-                },
-                {
-                    role: "model",
-                    parts: [{ text: "เข้าใจแล้วครับ เราชื่อมินิมอส ยินดีรับฟังและอยู่ข้างๆ เสมอ มีอะไรระบายออกมาได้เลยนะ 🤍" }],
-                },
-            ],
-        });
+    const chat = model.startChat({
+        history: [
+            {
+                role: "user",
+                parts: [{ text: "คุณคือเพื่อนชื่อ 'มินิมอส' หน้าที่คือรับฟัง ให้กำลังใจ ใช้ภาษาอบอุ่น เป็นกันเอง ไม่ตัดสินคน ห้ามแนะนำทางการแพทย์" }],
+            },
+            {
+                role: "model",
+                parts: [{ text: "เข้าใจแล้วครับ เราชื่อมินิมอส ยินดีรับฟังและอยู่ข้างๆ เสมอ 🤍" }],
+            },
+        ],
+    });
+
 
         let selectedMoodData = null;
 
@@ -423,3 +423,4 @@
 </body>
 
 </html>
+
